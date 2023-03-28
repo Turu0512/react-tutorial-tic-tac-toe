@@ -4,7 +4,7 @@ function Square() {
   const [value, setValue] = useState(null);
 
   function handleClick() {
-    console.log("clicked!");
+    setValue("X");
   }
 
   return (
@@ -15,6 +15,7 @@ function Square() {
 }
 
 export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
   return (
     <>
       <div className="board-row">
