@@ -18,7 +18,9 @@ export default function Game() {
     setXIsNext(!xIsNext);
   }
   function jumpTo(nextMove) {
-    // TODO
+    <li key={move}>
+      <button onClick={() => jumpTo(move)}>{description}</button>
+    </li>;
   }
 
   const moves = history.map((squares, move) => {
